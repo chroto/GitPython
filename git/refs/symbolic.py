@@ -127,7 +127,7 @@ class SymbolicReference(object):
 			fp = open(join(repo.git_dir, ref_path), 'r')
 			value = fp.read().rstrip()
 			fp.close()
-			tokens = value.split(" ")
+			tokens = value.split()
 		except (OSError,IOError):
 			# Probably we are just packed, find our entry in the packed refs file
 			# NOTE: We are not a symbolic ref if we are in a packed file, as these
